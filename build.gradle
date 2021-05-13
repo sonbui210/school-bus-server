@@ -1,0 +1,57 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.0'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.hoanganhbk'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation('org.springframework.boot:spring-boot-starter-validation')
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'org.json:json:20180813'
+	compile('org.springframework.boot:spring-boot-starter-mail')
+	compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+
+processResources {
+	from ('/Users/nguyenhoanganh/Desktop/Projects/school-bus-tracking/dist') {
+		into 'public'
+	}
+}
+
+bootJar {
+	mainClassName = 'com.hoanganhbk.schoolBus.SchoolBusApplication'
+	from ('/Users/nguyenhoanganh/Desktop/Projects/school-bus-tracking/dist') {
+		into 'public'
+	}
+}
+
+

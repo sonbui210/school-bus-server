@@ -62,7 +62,7 @@ public class BusController {
 
         JSONObject route = new JSONObject(busDto.getRoute());
         bus.setRoute(route.toString());
-        bus.setStatus("OFF");
+        bus.setStatus("ON");
         bus.setWaypoint(busDto.getWaypoint());
 
         bus = busRepository.save(bus);

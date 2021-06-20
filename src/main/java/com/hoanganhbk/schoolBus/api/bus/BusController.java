@@ -30,7 +30,7 @@ public class BusController {
 
     @GetMapping("/searchPlace")
     public ResponseEntity searchPlace(@RequestParam String query) {
-        String URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
+        String URL = "https://geocode.search.hereapi.com/v1/geocode?q=";
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
@@ -38,12 +38,12 @@ public class BusController {
 
         HttpEntity httpEntity = new HttpEntity(headers, null);
 
-        URL = URL + query + "&key=AIzaSyDNI_ZWPqvdS6r6gPVO50I4TlYkfkZdXh8";
+        URL = URL + query + "&apiKey=N6p5dtiakVhnLX8ILOId8mvAAt4TeUpbWpV4WemZ_4U";
 
         ResponseEntity<String> response = restTemplate.exchange(URL,  HttpMethod.GET, httpEntity, String.class);
 
         JSONObject result = new JSONObject(response.getBody());
-        return Response.dataJson( result);
+        return Response.dataJson( label);
     }
 
     @PostMapping("/addNewBus")

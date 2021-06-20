@@ -43,7 +43,7 @@ public class BusController {
         ResponseEntity<String> response = restTemplate.exchange(URL,  HttpMethod.GET, httpEntity, String.class);
 
         JSONObject result = new JSONObject(response.getBody());
-        return Response.dataJson( items);
+        return Response.dataJson( result);
     }
 
     @PostMapping("/addNewBus")

@@ -38,7 +38,7 @@ public class BusController {
 
         HttpEntity httpEntity = new HttpEntity(headers, null);
 
-        URL = URL + query + "&key=AIzaSyB8nBS2UR_xFx6VTiuiCehMGz-fYJ6V8qM";
+        URL = URL + query + "&key=AIzaSyBdKgzYknfDYqA-oPi1YOaQUvadM-1ZRSY";
 
         ResponseEntity<String> response = restTemplate.exchange(URL,  HttpMethod.GET, httpEntity, String.class);
 

@@ -99,7 +99,7 @@ public class StudentController {
             // Send Message!
             this.emailSender.send(message);
 
-            /*
+            
             //send email to hoc sinh
             SimpleMailMessage message1 = new SimpleMailMessage();
             message1.setTo(student.getEmailStudent());
@@ -107,7 +107,7 @@ public class StudentController {
             message1.setText("Ban vua " + action + " " + (bus != null ? bus.getCode() : "unknown") + " lúc " + now);
             // Send Message!
             this.emailSender.send(message1);
-            */
+            
         }
 
 

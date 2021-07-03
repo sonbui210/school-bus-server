@@ -87,7 +87,7 @@ public class StudentController {
             studentTrackingRepository.save(studentTracking);
         }
         
-        /*
+        
         //student = studentRepository.save(student);
         {
             //send email to phu huynh
@@ -111,7 +111,7 @@ public class StudentController {
             
         }
 
-        */
+        
         student = studentRepository.save(student);
 
         return Response.data(student);

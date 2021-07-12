@@ -84,7 +84,7 @@ public class AuthController {
             user.setEmail(request.getEmail());
             user.setPhone(request.getPhone());
 
-            Role role = roleRepository.findByCode("ROLE_ADMIN");
+            Role role = roleRepository.findByCode("USER");
             user.setRoles(Collections.singleton(role));
 
             user = userService.save(user);

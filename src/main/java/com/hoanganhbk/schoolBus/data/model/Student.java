@@ -45,6 +45,9 @@ public class Student extends AuditModel{
         Student student = (Student) o;
         return Objects.equals(id, student.id);
     }
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Override
     public int hashCode() {

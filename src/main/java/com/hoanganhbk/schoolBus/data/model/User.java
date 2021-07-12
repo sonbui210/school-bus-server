@@ -25,7 +25,7 @@ public class User {
 
     private String email;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "student_id")
     private Student student;
 

@@ -33,10 +33,10 @@ public class Student extends AuditModel{
 
     private String emailGrand;
 
-
+/*
     @ManyToOne
-    @JoinColumn(name = "bus_id")
-    private Bus bus;
+    @JoinColumn(name = "bus_id") */
+    private String bus;
 
     @Override
     public boolean equals(Object o) {

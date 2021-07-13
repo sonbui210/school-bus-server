@@ -23,14 +23,15 @@ public class User {
 
     private String phone;
 
-    @JsonIgnore
+
     private String email;
 
     @OneToOne
     @JoinColumn(name = "student_id")
     private Student student_id;
 
-    //private String bus;
+    @JsonIgnore
+    private Student bus;
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "user_role",

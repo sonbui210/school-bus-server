@@ -1,6 +1,7 @@
 package com.hoanganhbk.schoolBus.data.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -33,7 +34,7 @@ public class Student extends AuditModel{
 
     private String emailGrand;
 
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "bus_id")
     private Bus bus;

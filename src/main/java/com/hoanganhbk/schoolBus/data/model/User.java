@@ -32,8 +32,6 @@ public class User {
     @JoinColumn(name = "student_id")
     private Student student_id;
 
-    @JsonIgnore
-    private Student bus;
 /*
     @JsonIgnore
     private Student student_bus;

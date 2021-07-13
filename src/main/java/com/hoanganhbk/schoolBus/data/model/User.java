@@ -26,8 +26,8 @@ public class User {
     private String email;
 
     @ManyToMany(fetch=FetchType.LAZY)
-    @JoinColumn(name = "student_id")
-    private Student student_id;
+    @JoinTable(name = "student_id")
+    private Set<Student> student;
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "user_role",

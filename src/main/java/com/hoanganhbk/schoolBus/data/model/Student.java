@@ -36,6 +36,8 @@ public class Student extends AuditModel{
 
     private String busCodeGet;
 
+    private String avatar;
+
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "bus_id")

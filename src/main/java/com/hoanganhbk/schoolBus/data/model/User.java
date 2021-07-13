@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "sys_user")
 @Data
-@JsonIgnoreProperties({ "student_id" })
+//@JsonIgnoreProperties({ "student_id" })
 public class User {
     @Id
     @GeneratedValue
@@ -31,6 +31,9 @@ public class User {
     @OneToOne
     @JoinColumn(name = "student_id")
     private Student student_id;
+
+    @JsonIgnore
+    private Student bus;
 /*
     @JsonIgnore
     private Student student_bus;

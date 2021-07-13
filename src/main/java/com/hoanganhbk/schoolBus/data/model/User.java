@@ -25,9 +25,12 @@ public class User {
 
     private String email;
 
-    @ManyToMany(fetch=FetchType.LAZY)
-    @JoinTable(name = "student_id")
-    private Set<Student> student;
+    @OneToOne
+    @JoinTable(name = "student_id",
+    joinColumns = @JoinColumn(name = "user_id"),
+    inverseJoinColumns = @JoinColumn(name = "bus_id"))
+    //@JoinColumn(name = "student_id")
+    private Student student_id;
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "user_role",

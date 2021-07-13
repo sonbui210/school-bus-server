@@ -1,6 +1,7 @@
 package com.hoanganhbk.schoolBus.data.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "sys_user")
 @Data
+@JsonIgnoreProperties({ "bus" })
 public class User {
     @Id
     @GeneratedValue
@@ -29,9 +31,10 @@ public class User {
     @OneToOne
     @JoinColumn(name = "student_id")
     private Student student_id;
-
+/*
     @JsonIgnore
-    private Student bus;
+    private Student student_bus;
+*/
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "user_role",

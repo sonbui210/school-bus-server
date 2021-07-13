@@ -26,10 +26,7 @@ public class User {
     private String email;
 
     @OneToOne
-    @JoinTable(name = "student_id",
-    joinColumns = @JoinColumn(name = "user_id"),
-    inverseJoinColumns = @JoinColumn(name = "bus_id"))
-    //@JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_id")
     private Student student_id;
 
     @ManyToMany(fetch=FetchType.EAGER)

@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "sys_user")
 @Data
-@JsonIgnoreProperties({ "bus" })
+@JsonIgnoreProperties({ "student_id.bus" })
 public class User {
     @Id
     @GeneratedValue

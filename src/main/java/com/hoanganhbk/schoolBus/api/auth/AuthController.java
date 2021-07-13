@@ -9,6 +9,7 @@ import com.hoanganhbk.schoolBus.app.security.JwtTokenProvider;
 import com.hoanganhbk.schoolBus.constant.Message;
 import com.hoanganhbk.schoolBus.data.model.CustomUserDetails;
 import com.hoanganhbk.schoolBus.data.model.Role;
+import com.hoanganhbk.schoolBus.data.model.Student;
 import com.hoanganhbk.schoolBus.data.model.User;
 import com.hoanganhbk.schoolBus.data.repository.RoleRepository;
 import com.hoanganhbk.schoolBus.helper.UserHelper;

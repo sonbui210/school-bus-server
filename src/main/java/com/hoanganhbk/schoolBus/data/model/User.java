@@ -25,9 +25,9 @@ public class User {
 
     private String email;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "student_id")
-    private Student student;
+    private Student student_id;
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "user_role",

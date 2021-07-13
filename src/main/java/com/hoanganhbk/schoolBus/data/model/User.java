@@ -25,7 +25,7 @@ public class User {
 
     private String email;
 
-    @ManyToOne
+    @ManyToMany(fetch=FetchType.LAZY)
     @JoinColumn(name = "student_id")
     private Student student_id;
 

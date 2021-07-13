@@ -72,6 +72,7 @@ public class StudentController {
                 student.setBus(null);
             }
         }
+        student.setBusCodeGet(bus.getCode());
 
 
         {
@@ -86,7 +87,7 @@ public class StudentController {
             studentTracking.setImage(requestParsed.optString("image"));
             studentTrackingRepository.save(studentTracking);
         }
-        
+
         
         //student = studentRepository.save(student);
         {

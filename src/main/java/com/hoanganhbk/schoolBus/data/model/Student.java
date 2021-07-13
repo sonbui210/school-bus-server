@@ -34,6 +34,8 @@ public class Student extends AuditModel{
 
     private String emailGrand;
 
+    private String busCodeGet;
+
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "bus_id")

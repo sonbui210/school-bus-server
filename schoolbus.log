@@ -224,3 +224,48 @@
 2021-07-13 18:57:55.726  INFO 18782 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2021-07-13 18:57:55.740  INFO 18782 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2021-07-13 18:57:57.986  INFO 18782 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-07-13 19:11:05.387  INFO 19281 --- [restartedMain] c.h.schoolBus.SchoolBusApplication       : Starting SchoolBusApplication using Java 14.0.2 on sonbui-K501LB with PID 19281 (/home/sonbui/IdeaProjects/school-bus-server/build/classes/java/main started by sonbui in /home/sonbui/IdeaProjects/school-bus-server)
+2021-07-13 19:11:05.392  INFO 19281 --- [restartedMain] c.h.schoolBus.SchoolBusApplication       : No active profile set, falling back to default profiles: default
+2021-07-13 19:11:05.497  INFO 19281 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-13 19:11:05.498  INFO 19281 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-13 19:11:07.263  INFO 19281 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-07-13 19:11:07.385  INFO 19281 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 6 JPA repository interfaces.
+2021-07-13 19:11:07.996  INFO 19281 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6513fbe8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-13 19:11:08.025  INFO 19281 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-13 19:11:08.563  INFO 19281 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2021-07-13 19:11:08.579  INFO 19281 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-13 19:11:08.580  INFO 19281 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-07-13 19:11:08.704  INFO 19281 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-13 19:11:08.705  INFO 19281 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3203 ms
+2021-07-13 19:11:08.828  WARN 19281 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-13 19:11:09.018  INFO 19281 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-13 19:11:09.115  INFO 19281 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.23.Final
+2021-07-13 19:11:09.321  INFO 19281 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-13 19:11:09.467  INFO 19281 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-13 19:11:12.492  INFO 19281 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-13 19:11:12.519  INFO 19281 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-13 19:11:20.858  INFO 19281 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-13 19:11:20.873  INFO 19281 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-13 19:11:21.143  INFO 19281 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-13 19:11:21.305  INFO 19281 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2021-07-13 19:11:21.315  INFO 19281 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2021-07-13 19:11:21.620  INFO 19281 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2021-07-13 19:11:21.918  INFO 19281 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c29daa1, org.springframework.security.web.context.SecurityContextPersistenceFilter@387e8620, org.springframework.security.web.header.HeaderWriterFilter@23bd47ad, org.springframework.web.filter.CorsFilter@2e57c19a, org.springframework.security.web.authentication.logout.LogoutFilter@5416e91e, com.hoanganhbk.schoolBus.app.security.JwtAuthenticationFilter@366512a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fd1c717, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e8a3254, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2931254e, org.springframework.security.web.session.SessionManagementFilter@7f9109c9, org.springframework.security.web.access.ExceptionTranslationFilter@764598d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a8899b4]
+2021-07-13 19:11:21.953  INFO 19281 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2021-07-13 19:11:22.411  INFO 19281 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2021-07-13 19:11:22.413  INFO 19281 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2021-07-13 19:11:22.414  INFO 19281 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a3cf924]]
+2021-07-13 19:11:22.414  INFO 19281 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2021-07-13 19:11:22.415  INFO 19281 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-07-13 19:11:23.383  INFO 19281 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-07-13 19:11:23.397  INFO 19281 --- [restartedMain] c.h.schoolBus.SchoolBusApplication       : Started SchoolBusApplication in 18.757 seconds (JVM running for 19.562)
+2021-07-13 19:11:27.283  INFO 19281 --- [SpringContextShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2021-07-13 19:11:27.285  INFO 19281 --- [SpringContextShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@a3cf924]]
+2021-07-13 19:11:27.285  INFO 19281 --- [SpringContextShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2021-07-13 19:11:27.362  INFO 19281 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'brokerChannelExecutor'
+2021-07-13 19:11:27.364  INFO 19281 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2021-07-13 19:11:27.365  INFO 19281 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2021-07-13 19:11:27.368  INFO 19281 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'clientInboundChannelExecutor'
+2021-07-13 19:11:27.369  INFO 19281 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-07-13 19:11:27.388  INFO 19281 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-07-13 19:11:28.736  INFO 19281 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

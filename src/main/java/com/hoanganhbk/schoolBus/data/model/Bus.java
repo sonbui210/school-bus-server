@@ -20,6 +20,10 @@ public class Bus {
 
     private String route;
 
+    private String original;
+
+    private String destination;
+
     private String code;
 
     private String driver;

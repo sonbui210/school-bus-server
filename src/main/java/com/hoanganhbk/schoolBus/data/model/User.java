@@ -32,6 +32,10 @@ public class User {
     @JoinColumn(name = "student_id")
     private Student student_id;
 
+    @OneToMany
+    @JoinColumn(name = "bus_id")
+    private Bus bus_id;
+
 /*
     @JsonIgnore
     private Student student_bus;

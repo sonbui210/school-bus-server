@@ -32,7 +32,7 @@ public class User {
     @JoinColumn(name = "student_id")
     private Student student_id;
 
-
+    private String busCode;
 /*
     @JsonIgnore
     private Student student_bus;

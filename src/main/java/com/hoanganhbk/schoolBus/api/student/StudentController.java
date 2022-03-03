@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.SimpleMailMessage;
+//import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
@@ -72,6 +72,7 @@ public class StudentController {
                 student.setBus(null);
             }
         }
+        assert bus != null;
         student.setBusCodeGet(bus.getCode());
 
 
@@ -82,7 +83,7 @@ public class StudentController {
             studentTracking.setStatus(student.getStatus() == Status.ON_BUS ? 1 : 0);
             String action = student.getStatus() == Status.ON_BUS ? "lên xe" : "xuống xe";
             String now = DateUtil.format(new Date());
-            studentTracking.setMessage("Học sinh " + student.getFullName() + " đã " + action + " " + (bus != null ? bus.getCode() : "unknown") + " lúc " + now);
+            studentTracking.setMessage("Học sinh " + student.getFullName() + " đã " + action + " " + bus.getCode() + " lúc " + now);
             studentTracking.setCreateAt(now);
             studentTracking.setImage(requestParsed.optString("image"));
             studentTrackingRepository.save(studentTracking);

@@ -75,7 +75,7 @@ public class StudentController {
         student.setBusCodeGet(bus.getCode());
 
 
-        /*{
+        {
             StudentTracking studentTracking = new StudentTracking();
             studentTracking.setStudentId(student.getId());
             studentTracking.setBusId(busId);
@@ -90,7 +90,7 @@ public class StudentController {
 
         
         //student = studentRepository.save(student);
-        {
+        /*{
             //send email to phu huynh
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(student.getEmailGrand());

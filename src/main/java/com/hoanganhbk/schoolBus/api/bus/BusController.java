@@ -29,14 +29,14 @@ public class BusController {
     private final BusUtil busUtil;
 
     @GetMapping("/searchPlace")
-    public ResponseEntity<Object> searchPlace(@RequestParam String query) {
+    public ResponseEntity searchPlace(@RequestParam String query) {
         String URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
 
-        HttpEntity<HttpHeaders> httpEntity = new HttpEntity<>(headers, null);
+        HttpEntity httpEntity = new HttpEntity(headers, null);
 
         URL = URL + query + "&key=AIzaSyD2MeXENtZxYoamNiN6tJ_ExW7tO4QwHXg";
 
@@ -47,7 +47,7 @@ public class BusController {
     }
 
     @PostMapping("/addNewBus")
-    public ResponseEntity<Object> addNewBus(@RequestBody BusDto busDto) {
+    public ResponseEntity addNewBus(@RequestBody BusDto busDto) {
         String error = busUtil.validateBusInfo(busDto);
         if (!StringUtils.isEmpty(error)) {
             throw new AppException(error);
@@ -71,12 +71,12 @@ public class BusController {
     }
 
     @GetMapping
-    public ResponseEntity<Object> getAllBuses() {
+    public ResponseEntity getAllBuses() {
         return Response.data(busRepository.findAll());
     }
 
     @PostMapping("/positionUpdated")
-    public ResponseEntity<Object> updatePosition(@RequestBody PositionDto request) {
+    public ResponseEntity updatePosition(@RequestBody PositionDto request) {
         Optional<Bus> busOpt = busRepository.findById(request.getBusId());
         if (busOpt.isPresent()) {
             Bus bus = busOpt.get();
@@ -93,7 +93,7 @@ public class BusController {
     }
 
     @GetMapping("/findById")
-    public ResponseEntity<Object> findById(@RequestParam long busId) {
+    public ResponseEntity findById(@RequestParam long busId) {
         Optional<Bus> busOpt = busRepository.findById(busId);
         if (busOpt.isPresent()) {
             Bus bus = busOpt.get();
@@ -105,7 +105,7 @@ public class BusController {
     }
 
     @GetMapping("/deleteById")
-    public ResponseEntity<Object> deleteBusById(@RequestParam long busId) {
+    public ResponseEntity deleteBusById(@RequestParam long busId) {
         Optional<Bus> busOpt = busRepository.findById(busId);
         if (busOpt.isPresent()) {
             Bus bus = busOpt.get();
@@ -117,7 +117,7 @@ public class BusController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<Object> searchBus(@RequestParam String searchKey) {
+    public ResponseEntity searchBus(@RequestParam String searchKey) {
         return Response.data(busRepository.findByCodeLike(searchKey));
     }
 }

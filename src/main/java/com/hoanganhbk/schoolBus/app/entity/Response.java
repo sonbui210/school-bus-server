@@ -44,6 +44,7 @@ public class Response {
     public static class Base {
         protected String apiVersion = "0.0.1";
         protected String status;
+        protected int msgCode;
     }
 
     @Getter
@@ -53,6 +54,7 @@ public class Response {
         private Id(String id) {
             {
                 this.status = "success";
+                this.msgCode = 1;
                 this.id = id;
             }
         }
@@ -65,6 +67,7 @@ public class Response {
         private Data(Object data) {
             {
                 this.status = "success";
+                this.msgCode = 1;
                 this.data = data;
             }
         }
@@ -76,6 +79,7 @@ public class Response {
         private Error( String message) {
             {
                 this.status = "error";
+                this.msgCode = 2;
                 this.error = new ErrorInfo(message);
             }
         }
@@ -83,6 +87,7 @@ public class Response {
         private Error( String message, String code, String... prms) {
             {
                 this.status = "error";
+                this.msgCode = 2;
                 this.error = new ErrorInfo(message, code, prms);
             }
         }
